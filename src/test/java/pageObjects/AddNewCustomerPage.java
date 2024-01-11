@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.concurrent.TimeUnit;
+
 public class AddNewCustomerPage {
 
 
@@ -55,11 +57,14 @@ public class AddNewCustomerPage {
         ldriver.findElement(password).sendKeys(pswd);
     }
 
-    public void customerDD(){
+    public void customerDD()
+    {
+        ldriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         ldriver.findElement(customerDropdown).click();
     }
 
     public void customerDropdownOption(){
+        ldriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         ldriver.findElement(CustomerDropdownOption).click();
         ldriver.findElement(CustomerDropDownDeleteOption).click();
     }

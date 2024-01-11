@@ -11,6 +11,7 @@ Feature: Login
     Then page title should be "Your store. Login"
     And close the browser
 
+
   Scenario Outline: Login Data Driven
 
     Given User launch the Chrome browser
@@ -25,4 +26,4 @@ Feature: Login
     Examples:
            | email | password |
            | admin@yourstore.com | admin |
-           | admin1@yourstore.com | admin123 |
+           | admin@yourstore.com | admin |

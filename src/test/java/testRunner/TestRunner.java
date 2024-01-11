@@ -11,9 +11,8 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions
         (
-                features=".//feature/Login.feature",
+                features=".//feature//",
                 glue="stepDefinitions",
-                dryRun = false,
                 monochrome = true,
                 plugin = {"html:target/cucumber.html"}
 

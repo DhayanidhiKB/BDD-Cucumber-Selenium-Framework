@@ -1,5 +1,6 @@
 package pageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,7 +22,7 @@ public class LoginPage {
     @FindBy(xpath="//button[@type='submit']")
     WebElement loginBtn;
 
-    @FindBy(xpath="//a[contains(text(),'Logout')]")
+    @FindBy(xpath="(//div[@id='navbarText']//a)[2]")
     WebElement logoutBtn;
 
     public void setUserName(String userName){
